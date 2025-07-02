@@ -136,16 +136,59 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Enhanced Main Heading with 3D text effect */}
-          <h1 className="text-6xl md:text-9xl font-bold text-white mb-6 leading-tight animate-text-glow">
-            <span className="bg-gradient-to-r from-green-400 via-lime-400 to-emerald-400 bg-clip-text text-transparent animate-gradient-shift inline-block transform-gpu">
-              Coming
-            </span>
-            <br />
-            <span className="text-white hover-scale-3d inline-block transition-all duration-500 transform-gpu perspective-1000 animate-text-float">
-              Soon
-            </span>
-          </h1>
+          {/* Ultra Enhanced Main Heading with Multiple Effects */}
+          <div className="mb-8 relative">
+            {/* Background glow effects */}
+            <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-lime-400/40 to-emerald-400/30 blur-3xl animate-pulse-slow scale-110"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-green-400/30 to-cyan-400/20 blur-2xl animate-float scale-105"></div>
+            
+            <h1 className="relative text-6xl md:text-9xl font-black leading-tight">
+              {/* Coming text with enhanced effects */}
+              <div className="mb-2 relative">
+                <span 
+                  className="bg-gradient-to-r from-green-300 via-lime-300 to-emerald-300 bg-clip-text text-transparent inline-block transform-gpu perspective-1000 animate-text-float"
+                  style={{
+                    textShadow: '0 0 40px rgba(34, 197, 94, 0.8), 0 0 80px rgba(34, 197, 94, 0.6), 0 0 120px rgba(34, 197, 94, 0.4)',
+                    filter: 'drop-shadow(0 10px 30px rgba(34, 197, 94, 0.7))',
+                    WebkitTextStroke: '2px rgba(34, 197, 94, 0.3)',
+                  }}
+                >
+                  Coming
+                </span>
+                {/* Sparkle effects around "Coming" */}
+                <Sparkles className="absolute -top-6 -right-6 w-8 h-8 text-yellow-300 animate-twinkle" />
+                <Star className="absolute -top-4 left-1/4 w-6 h-6 text-lime-300 animate-pulse" fill="currentColor" />
+              </div>
+              
+              {/* Soon text with even more dramatic effects */}
+              <div className="relative">
+                <span 
+                  className="bg-gradient-to-r from-white via-lime-200 to-green-200 bg-clip-text text-transparent inline-block transform-gpu preserve-3d hover:scale-110 transition-all duration-700"
+                  style={{
+                    textShadow: '0 0 60px rgba(255, 255, 255, 0.9), 0 0 100px rgba(163, 230, 53, 0.8), 0 0 140px rgba(34, 197, 94, 0.6)',
+                    filter: 'drop-shadow(0 15px 40px rgba(255, 255, 255, 0.8)) drop-shadow(0 5px 20px rgba(34, 197, 94, 0.9))',
+                    WebkitTextStroke: '3px rgba(255, 255, 255, 0.2)',
+                    animation: 'textGlow 3s ease-in-out infinite, textFloat 4s ease-in-out infinite',
+                  }}
+                >
+                  Soon
+                </span>
+                {/* Enhanced sparkle effects around "Soon" */}
+                <Sparkles className="absolute -top-8 -left-8 w-10 h-10 text-yellow-200 animate-twinkle" style={{ animationDelay: '0.5s' }} />
+                <Sparkles className="absolute -bottom-6 -right-8 w-12 h-12 text-lime-200 animate-twinkle" style={{ animationDelay: '1s' }} />
+                <Star className="absolute top-1/2 -left-12 w-8 h-8 text-green-200 animate-pulse" fill="currentColor" style={{ animationDelay: '1.5s' }} />
+                <Star className="absolute -top-2 right-1/4 w-7 h-7 text-yellow-200 animate-pulse" fill="currentColor" style={{ animationDelay: '2s' }} />
+              </div>
+            </h1>
+            
+            {/* Additional floating elements around the text */}
+            <div className="absolute -inset-16 pointer-events-none">
+              <Apple className="absolute top-0 left-0 w-6 h-6 text-green-300/50 animate-float-gentle" style={{ animationDelay: '0.5s' }} />
+              <Leaf className="absolute top-1/4 right-0 w-5 h-5 text-lime-300/60 animate-drift" style={{ animationDelay: '1s' }} />
+              <Heart className="absolute bottom-0 left-1/4 w-5 h-5 text-red-300/50 animate-heartbeat" fill="currentColor" style={{ animationDelay: '1.5s' }} />
+              <Apple className="absolute bottom-1/4 right-1/4 w-4 h-4 text-emerald-300/50 animate-float-rotate" style={{ animationDelay: '2s' }} />
+            </div>
+          </div>
 
           {/* Enhanced Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-delay">
