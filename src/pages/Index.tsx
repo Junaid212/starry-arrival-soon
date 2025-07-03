@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Leaf, Apple, Heart, Sparkles, Star } from 'lucide-react';
+import { Mail, Leaf, Apple, Heart, Sparkles } from 'lucide-react';
 
 const Index = () => {
   const [email, setEmail] = useState('');
@@ -22,7 +22,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800">
+    <div className="min-h-screen relative overflow-hidden" style={{ background: `linear-gradient(135deg, #16A34A 0%, #000000 50%, #16A34A 100%)` }}>
       {/* Simple Background Elements */}
       <div className="absolute inset-0">
         {[...Array(6)].map((_, i) => (
@@ -54,7 +54,7 @@ const Index = () => {
             }}
           >
             <Apple 
-              className="text-white" 
+              style={{ color: '#FFFF' }}
               size={window.innerWidth < 768 ? 12 : 16}
             />
           </div>
@@ -84,11 +84,11 @@ const Index = () => {
         ></div>
         <div 
           className="absolute -bottom-20 -right-20 sm:-bottom-40 sm:-right-40 w-60 h-60 sm:w-[500px] sm:h-[500px] rounded-full blur-3xl opacity-8"
-          style={{ backgroundColor: '#FFFF' }}
+          style={{ backgroundColor: '#16A34A' }}
         ></div>
         <div 
           className="absolute top-1/2 left-1/4 w-40 h-40 sm:w-80 sm:h-80 rounded-full blur-3xl opacity-12"
-          style={{ backgroundColor: '#AFF912' }}
+          style={{ backgroundColor: '#FFFF' }}
         ></div>
       </div>
 
@@ -103,12 +103,13 @@ const Index = () => {
                 style={{ color: '#AFF912' }}
               />
               <Heart 
-                className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 text-red-400 absolute -top-1 -right-1 sm:-top-2 sm:-right-2" 
+                className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 absolute -top-1 -right-1 sm:-top-2 sm:-right-2" 
+                style={{ color: '#16A34A' }}
                 fill="currentColor" 
               />
               <Sparkles 
                 className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 absolute -bottom-1 -left-1"
-                style={{ color: '#AFF912' }}
+                style={{ color: '#FFFF' }}
               />
             </div>
           </div>
@@ -121,37 +122,37 @@ const Index = () => {
             >
               Coming
             </span>
-            <span className="text-white block">
+            <span style={{ color: '#FFFF' }} className="block">
               Soon
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-            We're preparing something <span style={{ color: '#AFF912' }} className="font-semibold">fresh</span> and <span className="text-white font-semibold">nutritious</span>. Get ready for a healthy lifestyle revolution that will nourish your body and soul.
+          <p className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-2xl mx-auto leading-relaxed px-4 sm:px-0" style={{ color: '#FFFF' }}>
+            We're preparing something <span style={{ color: '#AFF912' }} className="font-semibold">fresh</span> and <span style={{ color: '#16A34A' }} className="font-semibold">nutritious</span>. Get ready for a healthy lifestyle revolution that will nourish your body and soul.
           </p>
 
           {/* Progress Bar */}
           <div className="mb-8 sm:mb-12 max-w-xs sm:max-w-md mx-auto px-4 sm:px-0">
-            <div className="flex justify-between text-xs sm:text-sm text-gray-400 mb-2">
+            <div className="flex justify-between text-xs sm:text-sm mb-2" style={{ color: '#FFFF' }}>
               <span>Progress</span>
               <span>85%</span>
             </div>
-            <div className="w-full bg-gray-800/50 rounded-full h-2 sm:h-3 overflow-hidden backdrop-blur-sm border border-white/10">
+            <div className="w-full rounded-full h-2 sm:h-3 overflow-hidden backdrop-blur-sm border" style={{ backgroundColor: 'rgba(22, 163, 74, 0.3)', borderColor: '#AFF912' }}>
               <div 
                 className="h-2 sm:h-3 rounded-full transition-all duration-1000 ease-out"
                 style={{ 
                   width: '85%',
-                  background: `linear-gradient(90deg, #AFF912 0%, #FFFF 100%)`
+                  background: `linear-gradient(90deg, #AFF912 0%, #16A34A 50%, #FFFF 100%)`
                 }}
               ></div>
             </div>
           </div>
 
           {/* Email Subscription Card */}
-          <Card className="max-w-xs sm:max-w-md mx-auto p-4 sm:p-6 md:p-8 bg-white/5 backdrop-blur-xl border border-white/20 hover:bg-white/10 hover:border-white/30 transition-all duration-300 shadow-2xl">
+          <Card className="max-w-xs sm:max-w-md mx-auto p-4 sm:p-6 md:p-8 backdrop-blur-xl border hover:border-opacity-50 transition-all duration-300 shadow-2xl" style={{ backgroundColor: 'rgba(22, 163, 74, 0.1)', borderColor: '#AFF912' }}>
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-              <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-white mb-4 sm:mb-6">
+              <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-4 sm:mb-6" style={{ color: '#FFFF' }}>
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                 <span className="font-semibold text-sm sm:text-base md:text-lg">Be the first to know</span>
                 <Sparkles 
@@ -165,17 +166,20 @@ const Index = () => {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:bg-white/20 focus:border-white/50 transition-all duration-300 backdrop-blur-sm text-sm sm:text-base"
+                  className="flex-1 backdrop-blur-sm text-sm sm:text-base transition-all duration-300"
                   style={{ 
-                    borderColor: 'rgba(175, 249, 18, 0.3)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    borderColor: '#16A34A',
+                    color: '#FFFF'
                   }}
                   required
                 />
                 <Button 
                   type="submit"
-                  className="transition-all duration-300 hover:scale-105 text-sm sm:text-base px-6 py-2 sm:px-4 sm:py-2 text-black font-semibold"
+                  className="transition-all duration-300 hover:scale-105 text-sm sm:text-base px-6 py-2 sm:px-4 sm:py-2 font-semibold"
                   style={{ 
-                    background: `linear-gradient(135deg, #AFF912 0%, #FFFF 100%)`,
+                    background: `linear-gradient(135deg, #AFF912 0%, #16A34A 100%)`,
+                    color: '#000000'
                   }}
                 >
                   Notify Me
@@ -187,25 +191,26 @@ const Index = () => {
           {/* Features Preview */}
           <div className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto px-4 sm:px-0">
             {[
-              { icon: Leaf, title: "Natural", desc: "100% organic ingredients" },
-              { icon: Apple, title: "Fresh", desc: "Farm-to-table freshness" },
-              { icon: Heart, title: "Healthy", desc: "Nutritious lifestyle choices" }
+              { icon: Leaf, title: "Natural", desc: "100% organic ingredients", color: '#AFF912' },
+              { icon: Apple, title: "Fresh", desc: "Farm-to-table freshness", color: '#FFFF' },
+              { icon: Heart, title: "Healthy", desc: "Nutritious lifestyle choices", color: '#16A34A' }
             ].map((feature, index) => (
               <div 
                 key={index}
-                className="text-center p-4 sm:p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 shadow-xl"
+                className="text-center p-4 sm:p-6 md:p-8 rounded-2xl backdrop-blur-lg border hover:border-opacity-70 transition-all duration-300 shadow-xl"
                 style={{
-                  borderColor: 'rgba(175, 249, 18, 0.2)',
+                  backgroundColor: 'rgba(22, 163, 74, 0.1)',
+                  borderColor: feature.color,
                 }}
               >
                 <div className="relative mb-3 sm:mb-4">
                   <feature.icon 
                     className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto relative z-10"
-                    style={{ color: '#AFF912' }}
+                    style={{ color: feature.color }}
                   />
                 </div>
-                <h3 className="text-white font-bold text-lg sm:text-xl mb-2 sm:mb-3">{feature.title}</h3>
-                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">{feature.desc}</p>
+                <h3 className="font-bold text-lg sm:text-xl mb-2 sm:mb-3" style={{ color: '#FFFF' }}>{feature.title}</h3>
+                <p className="text-xs sm:text-sm leading-relaxed" style={{ color: '#FFFF', opacity: 0.8 }}>{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -223,7 +228,7 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-xs sm:text-sm">
+      <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm" style={{ color: '#FFFF', opacity: 0.7 }}>
         © 2024 Coming Soon. All rights reserved.
       </div>
     </div>
